@@ -1,0 +1,6 @@
+:api:
+  :hostname: 'https://staging00.dev161.com'
+  :endpoint: 'api/v3'
+  :login: 'interview.challenge'
+  :password: 'xxxxxxxx'
+  :default_instance: sandboxcost
