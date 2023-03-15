@@ -1,6 +1,8 @@
 require "./lib/platform161/campaign"
 
-data 			= []
+
+
+$data 			= []
 instance        = "sandboxcost"
 campaign_fields = ["name", "start_on", "end_on", "active", "advertiser"]
 campaign_filter = [
@@ -27,7 +29,8 @@ campaign_api.fields(campaign_fields).get(nil, campaign_filter).each do |campaign
 	campaign_data[:end]         = campaign["attributes"]["end_on"][0, 10]
 	campaign_data[:active] 		= campaign["attributes"]["active"]
 
-	data << campaign_data
+  $data << campaign_data
 end
 
-puts data
+#puts $data
+
