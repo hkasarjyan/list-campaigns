@@ -6,7 +6,7 @@ module Platform161
 
     END_POINT = "campaigns"
 
-    def initialize(instance != nil)
+    def initialize(instance = nil)
       super(END_POINT, instance)
     end
 

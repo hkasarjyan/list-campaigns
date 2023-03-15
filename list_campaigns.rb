@@ -10,8 +10,8 @@ campaign_filter = [
 		match_key: Platform161::Api::Api::FILTER_GREATER
 	},
 	{
-		key: :status,
-		value: "active",
+		key: :active,
+		value: "true",
 		match_key: Platform161::Api::Api::FILTER_NOT_EQUAL
 	}
 ]
