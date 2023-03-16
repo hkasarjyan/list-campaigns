@@ -5,7 +5,7 @@ require_relative 'list_campaigns.rb'
 
 class TestListCampaigns < Test::Unit::TestCase
 
-  #puts $data[0][:active]
+  puts $data[0][:active]
   #puts $data[0][:start]
   def test_inactive
     data_length = $data.length
@@ -24,4 +24,7 @@ class TestListCampaigns < Test::Unit::TestCase
     end
   end
 
+
 end
+
+

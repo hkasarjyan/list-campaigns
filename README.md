@@ -19,6 +19,8 @@ Simply run the following command line:
 $ ruby list_campaigns.rb
 ```
 
-# To do
-
-Not sure this app exactly works as expected, so we still need to add some testing, I guess..
+# Items Completed
+1) Fixed code to make it run and return correct results
+2) Implemented using unit test 2 positive functional testcases (see tc_positive.rb)
+3) Filled one defect, see bug.report
+4) Created TCs for the app. (see Testcases.txt)

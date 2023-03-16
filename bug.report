@@ -1,0 +1,34 @@
+Description:
+API fetches campaigns with the starting date other than 2022
+
+Summary:
+According to the README file the application fetches all inactive campaigns starting only in 2022
+from Platform161, but when calling the API it also fetches the ones started in 2023.So the API doesn't work
+in compliance with the documentation.
+
+Steps to reproduce:
+1.Call the API to get the list of all campaigns
+2.Search the list for the campaigns with the 2023 starting date 
+
+Actual behavior:
+In contradiction with the documentation there are some campaigns started in 2023
+
+Expected behavior:
+The application must fetch all inactive campaigns starting only in 2022
+from Platform161
+
+Workaround:
+The defect is due to the code in list_campaigns.rb, where the current implementation is as described below:
+
+		key: :start_on,
+		value: "2022-01-01",
+		match_key: Platform161::Api::Api::FILTER_GREATER
+		
+So if we want to get only campaigs started in 2022 than the filter should look like this:
+		key: :start_on,
+		value: "2022-01-01",
+		match_key: Platform161::Api::Api::FILTER_GREATER
+		&&
+		key: :start_on,
+		value: "2022-12-31",
+		match_key: Platform161::Api::Api::FILTER_LESS_EQUAL

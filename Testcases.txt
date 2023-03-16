@@ -1,0 +1,48 @@
+TC:
+Poisitive cases:
+
+1) Send a request with 
+            "active": {
+                "ne":"true"
+            },
+            
+			"start_on": {
+                "gt": "2022-01-01"
+			}
+Validate that the response code is correct:
+Validate that the data is correct( all campaigns are inactive and their start date is after 2022
+
+2) There are a lot of different filters defined in api.rb file which needs to be tested
+      FILTER_EQUAL         = "eq"
+      FILTER_NOT_EQUAL     = "ne"
+      FILTER_LESS          = "lt"
+      FILTER_LESS_EQUAL    = "le"
+      FILTER_GREATER       = "gt"
+      FILTER_GREATER_EQUAL = "ge"
+      FILTER_LIKE          = "like"
+      FILTER_IN            = "in"
+      FILTER_NOT_IN        = "not_in"
+      FILTER_NULL          = "is_null"
+      FILTER_NOT_NULL      = "is_not_null"
+	  
+3) Send a request with 
+            "active": {
+                "eq":"true"
+            }
+	Validate that all active campaigns are listed.
+	
+4) Send a request with 
+			"start_on": {
+                "gt": date.now
+			}
+	Validate the appropriate error message is shown and/or there are no results. 
+
+5. Verify that the API response is in JSON format
+6. Verify that the API returns the expected number of inactive campaigns
+7. Verify that the API returns an error message if the request is invalid
+8. Verify that the API returns an error message if the bearer authentication token is invalid or missing
+9. Verify that the API returns only the fields that are required in response
+10. Verify that the API returns the campaigns in the expected order
+11. Verify that the API returns an error if the API endpoint is incorrect
+12. Verify that the API returns an error if the request params are missing or invalid
+13. Do almost all previous steps for all filters
